@@ -1,0 +1,51 @@
+# Get all transactions with optional pagination
+GET http://localhost:3001/transactions HTTP/1.1
+
+Query params:
+{
+  "perPage": "string", // items per page
+  "pageNo": "string"  // number of page
+}
+
+Response:
+[
+  {
+    "count": 0,
+    "data": {
+      "id": "string",
+      "amount": "string",
+      "type": "PROFITABLE",
+      "bankId": "string"
+    }
+  }
+]
+
+
+# Create new transaction
+POST http:/localhost:3001/transactions HTTP/1.1
+
+Request: 
+{
+  "amount": 0,
+  "bankId": "string",
+  "categoryIds": [
+    "string"
+  ]
+}
+
+Response:
+{
+  "message": "string",
+  "id": "string"
+}
+
+
+# Delete transaction
+DELETE http:/localhot:3001/transactions/:id HTTP/1.1
+
+Response:
+{
+  "message": "string",
+  "id": "string"
+}
+
