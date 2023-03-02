@@ -1,1 +1,0 @@
-{"version":3,"file":"message-response.dto.js","sourceRoot":"","sources":["../../../src/common/dtos/message-response.dto.ts"],"names":[],"mappings":";;;AAAA,2CAA0C;AAC1C,oCAAiC;AAOjC,MAAM,qBAAqB,GAAiC,KAAC,CAAC,MAAM,CAAC;IACnE,OAAO,EAAE,KAAC,CAAC,MAAM,EAAE;IACnB,EAAE,EAAE,KAAC,CAAC,MAAM,EAAE;CACf,CAAC,CAAC;AAEH,MAAa,kBAAmB,SAAQ,IAAA,yBAAY,EAAC,qBAAqB,CAAC;CAAG;AAA9E,gDAA8E"}

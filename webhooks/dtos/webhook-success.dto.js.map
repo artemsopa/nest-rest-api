@@ -1,1 +1,0 @@
-{"version":3,"file":"webhook-success.dto.js","sourceRoot":"","sources":["../../../src/webhooks/dtos/webhook-success.dto.ts"],"names":[],"mappings":";;;AAAA,2CAA0C;AAC1C,oCAAiC;AAEpB,QAAA,oBAAoB,GAAG,KAAC,CAAC,MAAM,CAAC;IAC3C,OAAO,EAAE,KAAC,CAAC,MAAM,EAAE;CACpB,CAAC,CAAC;AAEH,MAAa,iBAAkB,SAAQ,IAAA,yBAAY,EAAC,4BAAoB,CAAC;CAAG;AAA5E,8CAA4E"}
