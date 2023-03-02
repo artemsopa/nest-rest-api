@@ -3,6 +3,7 @@
 
 Run ```docker-compose-up``` to start a project
 
+Swagger documentation [Link](https://artemsopa.github.io/nest-rest-api/)
 
 ### Tables
 - banks
