@@ -1,0 +1,1 @@
+{"version":3,"file":"bank-param.dto.js","sourceRoot":"","sources":["../../../src/banks/dtos/bank-param.dto.ts"],"names":[],"mappings":";;;AAAA,2CAA0C;AAC1C,oCAAiC;AAEjC,MAAM,eAAe,GAAG,KAAC,CAAC,MAAM,CAAC;IAC/B,EAAE,EAAE,KAAC,CAAC,MAAM,CAAC;QACX,cAAc,EAAE,iCAAiC;QACjD,kBAAkB,EAAE,kCAAkC;KACvD,CAAC;CACH,CAAC,CAAC;AAEH,MAAa,YAAa,SAAQ,IAAA,yBAAY,EAAC,eAAe,CAAC;CAAG;AAAlE,oCAAkE"}

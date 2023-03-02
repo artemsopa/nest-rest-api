@@ -1,0 +1,1 @@
+{"version":3,"file":"transaction-list.dto.js","sourceRoot":"","sources":["../../../src/transactions/dtos/transaction-list.dto.ts"],"names":[],"mappings":";;;AAAA,2CAA0C;AAC1C,oCAAiC;AACjC,uDAAwE;AAExE,MAAM,qBAAqB,GAAG,KAAC,CAAC,MAAM,CAAC;IACrC,KAAK,EAAE,KAAC,CAAC,MAAM,EAAE;IACjB,IAAI,EAAE,mCAAiB;CACxB,CAAC,CAAC;AAEH,MAAa,wBAAyB,SAAQ,IAAA,yBAAY,EACxD,qBAAqB,CACtB;CAAG;AAFJ,4DAEI"}
