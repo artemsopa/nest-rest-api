@@ -1,7 +1,7 @@
 # NestJS REST API sample
 ### Financial manager to monitor your finances
 
-Run ```docker-compose-up``` to start a project
+Run ```docker-compose up``` to start a project
 
 Swagger documentation [Link](https://artemsopa.github.io/nest-rest-api/)
 
