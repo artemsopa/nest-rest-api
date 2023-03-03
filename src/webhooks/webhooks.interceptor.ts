@@ -7,9 +7,9 @@ import {
   mixin,
   NestInterceptor,
 } from '@nestjs/common';
+import { AxiosError } from 'axios';
 import { catchError, EMPTY, lastValueFrom, tap } from 'rxjs';
 import { configsService } from '@/configs/configs.service';
-import { AxiosError } from 'axios';
 
 export const WebhookInterceptor = (hookName: string): any => {
   class WebhookMixin implements NestInterceptor {
@@ -23,19 +23,15 @@ export const WebhookInterceptor = (hookName: string): any => {
 
       const url = configsService.getApiUrl();
 
-      try {
-        return next.handle().pipe(
-          tap(() =>
-            lastValueFrom(this.httpService.post(`${url}/${hookName}`, body)),
-          ),
-          catchError((error) => {
-            this.logger.error((error as AxiosError).message);
-            return EMPTY;
-          }),
-        );
-      } catch (error) {
-        return next.handle();
-      }
+      return next.handle().pipe(
+        tap(() =>
+          lastValueFrom(this.httpService.post(`${url}/${hookName}`, body)),
+        ),
+        catchError((error) => {
+          this.logger.error((error as AxiosError).message);
+          return EMPTY;
+        }),
+      );
     }
   }
 

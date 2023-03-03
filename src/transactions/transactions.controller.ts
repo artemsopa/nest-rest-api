@@ -16,6 +16,7 @@ import {
   ApiResponse,
   ApiTags,
 } from '@nestjs/swagger';
+import { OnEvent } from '@nestjs/event-emitter';
 import { TransactionsService } from '@/transactions/transactions.service';
 import { TransactionListSchemaDto } from '@/transactions/dtos/transaction-list.dto';
 import { TransactionCreateDto } from '@/transactions/dtos/transaction-create.dto';
@@ -46,6 +47,14 @@ export class TransactionsController {
     return await this.transactionsService.getAllWithPagination(perPage, pageNo);
   }
 
+  @OnEvent('transaction.created', { async: true })
+  public async createWithEvent(
+    payload: TransactionCreateDto,
+  ): Promise<MessageResponseDto> {
+    const id = await this.transactionsService.create(payload);
+    return { message: `Transaction was successfully created`, id };
+  }
+
   @ApiOperation({ summary: 'Create new transaction' })
   @ApiResponse({
     status: HttpStatus.CREATED,
@@ -53,6 +62,7 @@ export class TransactionsController {
     type: MessageResponseDto,
   })
   @Post()
+  @HttpCode(HttpStatus.CREATED)
   public async create(
     @Body()
     body: TransactionCreateDto,

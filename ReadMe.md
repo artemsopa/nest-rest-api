@@ -219,8 +219,26 @@ Response:
 ```
 - ### Webhooks:
 ```http
-# Create new transaction via webhook
-POST /webhooks/transactions HTTP/1.1
+# Create new transaction with event emitter
+POST http:/localhost:3001/webhooks/transactions/event HTTP/1.1
+
+Request: 
+{
+  "amount": 0,
+  "bankId": "string",
+  "categoryIds": [
+    "string"
+  ]
+}
+
+Response:
+{
+  "message": "string"
+}
+```
+```http
+# Create new transaction with axios
+POST http:/localhost:3001/webhooks/transactions/axios HTTP/1.1
 
 Request: 
 {
