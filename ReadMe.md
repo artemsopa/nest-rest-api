@@ -220,7 +220,7 @@ Response:
 - ### Webhooks:
 ```http
 # Create new transaction with event emitter
-POST http:/localhost:3001/webhooks/transactions/event HTTP/1.1
+POST /webhooks/transactions/event HTTP/1.1
 
 Request: 
 {
@@ -238,7 +238,7 @@ Response:
 ```
 ```http
 # Create new transaction with axios
-POST http:/localhost:3001/webhooks/transactions/axios HTTP/1.1
+POST /webhooks/transactions/axios HTTP/1.1
 
 Request: 
 {
