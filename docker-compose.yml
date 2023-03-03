@@ -17,6 +17,8 @@ services:
       - DB_NAME=db
       - API_URL=http://api:3005
       - STAGE=DEV
+    expose:
+      - 3005
     ports:
       - 3005:3005
     depends_on:
@@ -26,7 +28,6 @@ services:
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
-    command: npm run start
 
   postgres:
     image: postgres
